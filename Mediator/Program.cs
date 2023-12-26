@@ -1,2 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Mediator;
+using Mediator.Requests;
+
+AlarmMediator alarmMediator = new(new CoffeePot(), new Sprinkler());
+CalendarMediator calendarMediator = new(new CoffeePot(), new Sprinkler());
+
+Alarm alarm = new(alarmMediator);
+Calendar calendar = new(calendarMediator);
+
+calendar.OnEvent();
+alarm.OnEvent();

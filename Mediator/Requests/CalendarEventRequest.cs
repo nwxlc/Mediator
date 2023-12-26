@@ -1,6 +1,8 @@
 namespace Mediator.Requests;
 
-public class CalendarEventRequest
+public class CalendarEventRequest : CalendarRequest
 {
-    
+    public CalendarEventRequest(DateOnly dateOnly)
+        :base(dateOnly)
+    { }
 }

@@ -1,6 +1,6 @@
 namespace Mediator.Requests;
 
-public class IRequest
+public interface IRequest
 {
     
 }

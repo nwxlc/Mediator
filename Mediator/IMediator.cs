@@ -1,6 +1,8 @@
+using Mediator.Requests;
+
 namespace Mediator;
 
-public class IMediator
+public interface IMediator
 {
-    
+    public void Execute(IRequest request);
 }
